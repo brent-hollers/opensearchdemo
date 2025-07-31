@@ -1,0 +1,18 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: An AWS Serverless Specification template describing your function.
+Resources:
+  pdftotxt:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: lambda_function.lambda_handler
+      Runtime: python3.10
+      CodeUri: .
+      Description: ''
+      MemorySize: 512
+      Timeout: 900
+      Role: 'arn:aws:iam::736424551703:role/lambda_opensearch'
+      Environment:
+        Variables:
+          TARGET_BUCKET: gl-inter-store
+

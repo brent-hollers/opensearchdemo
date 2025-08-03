@@ -5,8 +5,10 @@ phases:
       python: 3.10
   build:
     commands:
-      -sam build
-      - aws cloudformation package --template-file pdftotxt.yaml --s3-bucket hollers-artifacts-bucket-gl --output-template-file lambdaoutput.yaml
+      # This command finds requirements.txt and installs dependencies
+      - sam build
+      # This command packages the built artifacts for deployment
+      - sam package --output-template-file lambdaoutput.yaml --s3-bucket hollers-artifacts-bucket-gl
 
 artifacts:
   type: zip

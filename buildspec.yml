@@ -5,10 +5,7 @@ phases:
       python: 3.10
   build:
     commands:
-      # This command finds requirements.txt and installs dependencies
-      - sam build --template-file pdftotxt.yaml --use-container
-      # This command packages the built artifacts for deployment
-      - sam package --output-template-file lambdaoutput.yaml --s3-bucket hollers-artifacts-bucket-gl
+      - aws cloudformation package --output-template-file lambdaoutput.yaml --s3-bucket hollers-artifacts-bucket-gl
 
 artifacts:
   type: zip

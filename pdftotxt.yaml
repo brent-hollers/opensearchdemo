@@ -14,5 +14,5 @@ Resources:
       Role: 'arn:aws:iam::736424551703:role/lambda_opensearch'
       Environment:
         Variables:
-          TARGET_BUCKET: gl-inter-store
+          TARGET_BUCKET: hollers-gl-inter-store
 

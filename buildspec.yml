@@ -5,6 +5,7 @@ phases:
       python: 3.10
   build:
     commands:
+      -sam build
       - aws cloudformation package --template-file pdftotxt.yaml --s3-bucket hollers-artifacts-bucket-gl --output-template-file lambdaoutput.yaml
 
 artifacts:

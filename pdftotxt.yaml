@@ -11,7 +11,7 @@ Resources:
       Description: ''
       MemorySize: 512
       Timeout: 900
-      Role: 'arn:aws:iam::736424551703:role/lambda_opensearch'
+      Role: 'arn:aws:iam::736424551703:role/lambda-execution-role'
       Environment:
         Variables:
           TARGET_BUCKET: hollers-gl-inter-store

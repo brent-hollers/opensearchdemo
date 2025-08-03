@@ -6,7 +6,7 @@ phases:
   build:
     commands:
       # This command finds requirements.txt and installs dependencies
-      - sam build
+      - sam build --template-file pdftotxt.yaml
       # This command packages the built artifacts for deployment
       - sam package --output-template-file lambdaoutput.yaml --s3-bucket hollers-artifacts-bucket-gl
 
